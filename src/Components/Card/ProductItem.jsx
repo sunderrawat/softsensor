@@ -3,6 +3,7 @@ import Bag from "./../../assets/bag.jpg";
 import { ReactComponent as CartIcon } from "./../../assets/cart-outline.svg";
 
 function ProductItem(props) {
+  const data = props.data;
   return (
     <div className={classes.card}>
       <div className={classes.card__visual}>
@@ -17,18 +18,18 @@ function ProductItem(props) {
           </div>
         </div>
         <div className={classes.card__image}>
-          <img src={Bag} alt="Product" className={classes["image-item"]} />
+          <img src={data.image} alt="Product" className={classes["image-item"]} />
         </div>
       </div>
       <div className={classes.card__details}>
-        <div className={classes.title}>Sandisk SSD 1 TB</div>
-        <div className={classes.price}>Cost: &#36; 699</div>
-        <div className={classes.btn}>
-          <div className={classes.icon}>
-            <CartIcon></CartIcon>
-          </div>
+        <div className={classes.title}>{data.title.trim().length < 47
+                  ? data.title.trim()
+                  : `${data.title.trim().substring(0, 46)}...`}</div>
+        <div className={classes.price}>Cost: &#36; {data.price}</div>
+        <button className={classes.btn}>
+            <CartIcon className={classes.icon}></CartIcon>
           <span className={classes.btn__txt}>Add To Cart</span>
-        </div>
+        </button>
       </div>
     </div>
   );
