@@ -1,0 +1,63 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  height: 450px;
+}
+
+.card__visual {
+}
+
+.features {
+  display: flex;
+  justify-content: space-between;
+}
+
+.features__gender {
+}
+
+.features__property {
+  font-weight: 500;
+}
+
+.features__value {
+}
+
+.features__color {
+}
+
+.card__image {
+  width: 100%;
+  height: 100%;
+}
+
+.image-item {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card__details {
+}
+
+.title {
+}
+
+.price {
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    background-color: rgba(50, 125, 211, 0.623);
+    color: #fff;
+}
+
+.icon {
+    width: 25px;
+}
+
+.btn__txt {
+    margin-left: 10px;
+}
