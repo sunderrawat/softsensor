@@ -4,6 +4,9 @@ import { ReactComponent as CartIcon } from "./../../assets/cart-outline.svg";
 
 function ProductItem(props) {
   const data = props.data;
+  function addToCart(){
+    console.log('item added to cart')
+  }
   return (
     <div className={classes.card}>
       <div className={classes.card__visual}>
@@ -26,7 +29,7 @@ function ProductItem(props) {
                   ? data.title.trim()
                   : `${data.title.trim().substring(0, 46)}...`}</div>
         <div className={classes.price}>Cost: &#36; {data.price}</div>
-        <button className={classes.btn}>
+        <button className={classes.btn} onClick={addToCart}>
             <CartIcon className={classes.icon}></CartIcon>
           <span className={classes.btn__txt}>Add To Cart</span>
         </button>

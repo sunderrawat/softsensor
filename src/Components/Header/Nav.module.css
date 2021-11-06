@@ -1,0 +1,38 @@
+.nav{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #061331;
+    color: #fff;
+    height: 8rem;
+    align-items: center;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.nav__fixed{
+    position: fixed;
+    width: 100%;
+}
+
+.logo{
+    cursor: pointer;
+}
+
+.logo__img{
+    height: 6rem;
+}
+.nav__links{
+    align-self: center;
+    flex-basis: 50%;
+}
+
+.nav__ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.6rem;
+}
+
+.nav__li{
+    cursor: pointer;
+}
