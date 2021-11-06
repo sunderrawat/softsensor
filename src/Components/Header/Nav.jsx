@@ -4,15 +4,16 @@ import logo from "./../../assets/logo.png";
 import classes from "./Nav.module.css";
 
 function Nav() {
-    const [fixNav, setFixNav] = useState(false);
-    function fixNavHandler(){
-        if(window.scrollY >= 80){
-            setFixNav(true)
-        }else{
-            setFixNav(false)
-        }
+  const [fixNav, setFixNav] = useState(false);
+  function fixNavHandler() {
+    if (window.scrollY >= 80) {
+      setFixNav(true);
+      console.log("scrollin..", window.scrollY);
+    } else {
+      setFixNav(false);
     }
-    window.addEventListener('scroll', fixNavHandler);
+  }
+  window.addEventListener("scroll", fixNavHandler);
   return (
     <nav className={`${classes.nav} ${fixNav && classes.nav__fixed}`}>
       <div className={classes.logo}>
