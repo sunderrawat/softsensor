@@ -19,7 +19,6 @@ function ProductItem(props) {
     }
     items.push(JSON.parse(e.currentTarget.dataset.item));
     localStorage.setItem("items", JSON.stringify(items));
-    console.log("item added to cart", JSON.stringify(items));
   }
   return (
     <div className={classes.card}>

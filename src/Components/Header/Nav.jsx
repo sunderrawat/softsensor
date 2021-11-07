@@ -8,7 +8,6 @@ function Nav() {
   function fixNavHandler() {
     if (window.scrollY >= 80) {
       setFixNav(true);
-      console.log("scrollin..", window.scrollY);
     } else {
       setFixNav(false);
     }
